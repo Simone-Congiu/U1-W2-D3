@@ -130,6 +130,14 @@ console.log(characters)
   tutti gli oggetto femminili, CON QUESTA STRUTTURA: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
+ const femaleCharacters=[]
+for(i=0;i<starWarsCharacters.length;i++){
+  if(starWarsCharacters[i].gender==="female"){
+    femaleCharacters.push("nome:"+starWarsCharacters[i].name,"hair_color:"+starWarsCharacters[i].hair_color,"eye_color:"+starWarsCharacters[i].eye_color)
+  }
+  
+}
+console.log(femaleCharacters)
 
   
 
@@ -194,13 +202,14 @@ console.log(eyeColor)
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
-*/let crewMass = 0;
-let a=0
+*/let crewMass = 0
+       let a=0
 while(a<starWarsCharacters.length){
-  crewMass+=parseInt(starWarsCharacters[a].mass);a++
+
+  crewMass= crewMass+parseInt(starWarsCharacters[a].mass);a++}
 
 console.log(crewMass)
-}
+
 
 
 
@@ -227,11 +236,11 @@ switch(true){
   console.log("Ship is half loaded")
   break
 
-  case (massa>700):
+  case (massa>=700 && massa<=900):
     console.log("warning:load is over 700")
     break
 
-    case(massa>900):
+    case(massa>=900 && massa<=100):
     console.log("Critical load: over 900")
     break
 
@@ -255,6 +264,15 @@ switch(true){
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+for(let i=0;i<starWarsCharacters.length;i++){
+  if(starWarsCharacters[i].gender === "n/a"){
+    starWarsCharacters[i].gender="robot"
+  }
+  
+  
+
+}
+console.log(starWarsCharacters)
 
 
 
